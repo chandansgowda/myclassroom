@@ -102,7 +102,7 @@ _top(){
               children: [
                 Icon(Icons.arrow_circle_down),
                 SizedBox(width: 10.0,),
-                Text('One stop for all your classroom documents',style: TextStyle(fontSize: 12.0),)
+                Text('One stop for all your classroom updates',style: TextStyle(fontSize: 12.0, color: Colors.white),)
               ],
             ),
             IconButton(

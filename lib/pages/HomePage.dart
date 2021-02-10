@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sjce_myclassroom/Widgets/MyDashboard.dart';
+import 'package:sjce_myclassroom/utils/imageview.dart';
+import 'package:sjce_myclassroom/utils/pdfview.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -65,7 +67,10 @@ class HomePage extends StatelessWidget {
         backgroundColor: Colors.deepOrange,
         hoverColor: Colors.deepOrangeAccent,
         child: Icon(Icons.home,),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context)=> pdfview()));
+        },
       ),
     );
   }
