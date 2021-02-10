@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sjce_myclassroom/pages/latestupdates.dart';
 
 class MyDrawer extends StatelessWidget {
   @override
@@ -31,6 +32,15 @@ class MyDrawer extends StatelessWidget {
             title: Text('Syllabus Copies',style: TextStyle(fontSize: 15.0)),
             subtitle: Text('First Sem Subjects'),
             onTap: (){},
+          ),
+          ListTile(
+            leading: Icon(Icons.new_releases_sharp,size: 30.0,),
+            title: Text('Latest Updates',style: TextStyle(fontSize: 15.0)),
+            subtitle: Text('Internet Connection Required'),
+            onTap: (){
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context)=> LatestUpdates()));
+            },
           ),
           ListTile(
             leading: Icon(Icons.contacts_rounded,size: 30.0,),
