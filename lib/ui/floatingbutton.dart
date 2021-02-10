@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sjce_myclassroom/pages/HomePage.dart';
 
-class MyFloatingButton extends StatelessWidget {
+class HomeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(

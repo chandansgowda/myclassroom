@@ -73,6 +73,7 @@ class MyDashboard extends StatelessWidget {
             _gridItem(Icons.dry, '20CH12L', context, ChemistryLab()),
           ],),
         ),
+        SizedBox(height: 20.0,),
         Padding(padding: EdgeInsets.all(16.0),
         child: Center(
           child:
@@ -102,14 +103,11 @@ _top(){
           children: [
             Row(
               children: [
-                Icon(Icons.arrow_circle_down),
+
                 SizedBox(width: 10.0,),
-                Text('One stop for all your classroom updates',style: TextStyle(fontSize: 12.0, color: Colors.white),)
+                Text('One stop for all your classroom Docs',style: TextStyle(fontSize: 20.0, color: Colors.white),)
               ],
             ),
-            IconButton(
-                icon: Icon(Icons.arrow_circle_down),
-                onPressed: (){})
           ],
         ),
         SizedBox(height: 30.0,),

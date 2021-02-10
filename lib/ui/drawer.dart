@@ -28,12 +28,6 @@ class MyDrawer extends StatelessWidget {
             onTap: (){},
           ),
           ListTile(
-            leading: Icon(Icons.file_copy_rounded,size: 30.0,),
-            title: Text('Syllabus Copies',style: TextStyle(fontSize: 15.0)),
-            subtitle: Text('First Sem Subjects'),
-            onTap: (){},
-          ),
-          ListTile(
             leading: Icon(Icons.new_releases_sharp,size: 30.0,),
             title: Text('Latest Updates',style: TextStyle(fontSize: 15.0)),
             subtitle: Text('Internet Connection Required'),

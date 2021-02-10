@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
       ),
       drawer: MyDrawer(),
       body: MyDashboard(),
-      floatingActionButton: MyFloatingButton(),
+      floatingActionButton: HomeButton(),
     );
   }
 }
