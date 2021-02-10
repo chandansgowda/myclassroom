@@ -1,4 +1,4 @@
-# sjce_myclassroom
+# JSS_myclassroom
 
 Classroom document organisation solution.
 
