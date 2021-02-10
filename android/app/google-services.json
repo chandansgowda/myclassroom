@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "394279583610",
+    "project_id": "myclassroom-926c0",
+    "storage_bucket": "myclassroom-926c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394279583610:android:1f1e68099b732dedcae0c3",
+        "android_client_info": {
+          "package_name": "com.hikify.myclassroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "394279583610-vunkl6oflk0c69fkmc9b2j7d3o5e19t0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnGekmvIHUd-2NbV8f1_fCh_k9fgTYfSg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "394279583610-vunkl6oflk0c69fkmc9b2j7d3o5e19t0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
