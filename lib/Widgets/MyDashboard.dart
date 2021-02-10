@@ -8,13 +8,7 @@ import 'package:sjce_myclassroom/subjects/20hu120.dart';
 import 'package:sjce_myclassroom/subjects/20hu130.dart';
 import 'package:sjce_myclassroom/subjects/20ma110.dart';
 import 'package:sjce_myclassroom/subjects/20me120.dart';
-// import 'package:sjce_myclassroom/subjects/20ch110.dart';
-// import 'package:sjce_myclassroom/subjects/20cv110.dart';
-// import 'package:sjce_myclassroom/subjects/20ec110.dart';
-// import 'package:sjce_myclassroom/subjects/20hu120.dart';
-// import 'package:sjce_myclassroom/subjects/20hu130.dart';
-// import 'package:sjce_myclassroom/subjects/20ma110.dart';
-// import 'package:sjce_myclassroom/subjects/20me120.dart';
+
 
 _gridItem(icon, text, context, path ){
   return Column(
