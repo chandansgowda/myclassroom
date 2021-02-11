@@ -45,7 +45,7 @@ class _LatestUpdatesState extends State<LatestUpdates> {
       ),
       body: new Container(
           child: allData.length == 0
-              ? new Text(' Please wait... Its taking longer than usual. Check your internet connection..')
+              ? new Text('  Please wait... Its taking longer than usual. Check your internet connection..')
               : new ListView.builder(
             itemCount: allData.length,
             itemBuilder: (_, index) {

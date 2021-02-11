@@ -12,7 +12,7 @@ class HomeButton extends StatelessWidget {
       child: Icon(Icons.home,),
       onPressed: () {
         Navigator.push(context,
-            MaterialPageRoute(builder: (context)=> FirstPage()));
+            MaterialPageRoute(builder: (context)=> FirebasePdf()));
       },
     );
   }

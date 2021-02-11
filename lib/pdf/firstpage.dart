@@ -2,37 +2,46 @@ import 'dart:convert';
 import 'dart:io';
 import 'dart:math';
 import 'package:file_picker/file_picker.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-import 'package:sjce_myclassroom/pdf/secondpage.dart';
+import 'package:flutter_plugin_pdf_viewer/flutter_plugin_pdf_viewer.dart';
 
 class Modal{
   String link,name;
   Modal(this.link,this.name);
 }
 
-class FirstPage extends StatefulWidget {
+class FirebasePdf extends StatefulWidget {
+  // final String title;
+  // final String db_name;
+  // FirebasePdf(this.title, this.db_name)
+
   @override
-  _FirstPageState createState() => _FirstPageState();
+  _FirebasePdfState createState() => _FirebasePdfState();
 }
 
-class _FirstPageState extends State<FirstPage> {
+class _FirebasePdfState extends State<FirebasePdf> {
   List<Modal> itemList=List();
   final mainReference = FirebaseDatabase.instance.reference().child("Database");
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange,
-        title: Text("Pdf With Firebase"),
+        title: Text('Documents'),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  colors: [Colors.deepOrangeAccent, Colors.orangeAccent]
+              )
+          ),
+        ),
       ),
-      body: itemList.length==0?Text("Loading") : ListView.builder(
+      body: itemList.length==0?Text("  Please wait... Its taking longer than usual. Check your internet connection..") : ListView.builder(
         itemCount:itemList.length,
         itemBuilder: (context,index){
           return Padding(
-              padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+              padding: const EdgeInsets.fromLTRB(25, 10, 25 , 0),
               child: GestureDetector(
                 onTap: (){
                   String passData=itemList[index].link;
@@ -64,7 +73,7 @@ class _FirstPageState extends State<FirstPage> {
                           margin: EdgeInsets.all(18),
                           elevation: 7.0,
                           child: Center(
-                            child: Text(itemList[index].name+" "+(index+1).toString()),
+                            child: Text(itemList[index].name.toString(), style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30.0),),
                             //child: Text(itemList[index].name.toString()),
                           ),
                         ),
@@ -123,6 +132,7 @@ class _FirstPageState extends State<FirstPage> {
 
   @override
   void initState() {
+
     super.initState();
     mainReference.once().then((DataSnapshot snap){
       print(snap);
@@ -138,6 +148,48 @@ class _FirstPageState extends State<FirstPage> {
 
     });});
   }
+}
 
 
+class ViewPdf extends StatefulWidget {
+  @override
+  _ViewPdfState createState() => _ViewPdfState();
+}
+
+class _ViewPdfState extends State<ViewPdf> {
+  PDFDocument doc;
+  @override
+  Widget build(BuildContext context) {
+    //get data from first class
+    String data=ModalRoute.of(context).settings.arguments;
+    ViewNow() async {
+      doc = await PDFDocument.fromURL(
+          data);
+      setState(() {
+
+      });
+    }
+
+    Widget Loading(){
+      ViewNow();
+      if(doc==null){
+        return Text("  Please wait... Its taking longer than usual. Check your internet connection..");
+      }
+    }
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+        title: Text("PDF Reader"),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  colors: [Colors.deepOrangeAccent, Colors.orangeAccent]
+              )
+          ),
+        ),
+      ),
+
+      body: doc==null?Loading():PDFViewer(document: doc),
+    );
+  }
 }

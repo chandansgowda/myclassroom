@@ -23,14 +23,22 @@ class _ViewPdfState extends State<ViewPdf> {
     Widget Loading(){
       ViewNow();
       if(doc==null){
-        return Text("Loading...");
+        return Text("  Please wait... Its taking longer than usual. Check your internet connection..");
       }
     }
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: Text("Retrieve Pdf"),
+        title: Text("PDF Reader"),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  colors: [Colors.deepOrangeAccent, Colors.orangeAccent]
+              )
+          ),
+        ),
       ),
+
       body: doc==null?Loading():PDFViewer(document: doc),
     );
   }

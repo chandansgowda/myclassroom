@@ -76,7 +76,7 @@ class MyDashboard extends StatelessWidget {
           ],),
         ),
         SizedBox(height: 20.0,),
-        Padding(padding: EdgeInsets.all(16.0),
+        Padding(padding: EdgeInsets.only(top: 50.0),
         child: Center(
           child:
             Text('Made with ❤ by Uniquota Developers Club',style: TextStyle(fontSize: 10.0,),)

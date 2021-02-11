@@ -51,7 +51,10 @@ class MyDrawer extends StatelessWidget {
             leading: Icon(Icons.contacts_rounded,size: 30.0,),
             title: Text('Contact Teachers',style: TextStyle(fontSize: 15.0)),
             //subtitle: Text('Teachers contacts' ),
-            onTap: (){},
+            onTap: (){
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context)=> pdfview("https://firebasestorage.googleapis.com/v0/b/myclassroom-926c0.appspot.com/o/onlinepdf%2Fcontact_details.pdf?alt=media&token=be6d761d-75bd-4a18-b4bc-a6292dcbab65", "Contact Teachers")));
+            },
           ),
           ListTile(
             leading: Icon(Icons.arrow_circle_down,size: 30.0,),
