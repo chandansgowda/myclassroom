@@ -7,7 +7,7 @@ class pdfview extends StatefulWidget {
 }
 
 class _pdfviewState extends State<pdfview> {
-  String url = "http://www.pdf995.com/samples/pdf.pdf";
+  String url = "";
   String pdfasset = "assets/syllabus/notes.pdf";
   PDFDocument _doc;
   bool _loading;
