@@ -21,6 +21,7 @@ class Chemistry extends StatelessWidget {
               _top(),
               SizedBox(height: 10.0,),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
                   color: Colors.deepOrangeAccent,
@@ -54,9 +55,8 @@ _top(){
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
 
-                SizedBox(width: 75.0,),
                 Padding(
-                  padding: const EdgeInsets.symmetric(),
+                  padding: const EdgeInsets.all(8.0),
                   child: Text('CHEMISTRY',style: TextStyle(fontSize: 40.0, color: Colors.white, fontWeight: FontWeight.bold),),
                 )
               ],

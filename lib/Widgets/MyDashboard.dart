@@ -27,10 +27,11 @@ _gridItem(icon, text, context, path ){
           backgroundColor: Colors.deepOrangeAccent.withOpacity(0.9),
         ),
       ),
-      SizedBox(height: 10.0,),
+      SizedBox(height: 5.0,),
       Text(text, style: TextStyle(
         fontWeight: FontWeight.bold,
-      ),)
+      ),),
+      SizedBox(height: 5.0,)
     ],
 
   );
@@ -102,10 +103,14 @@ _top(){
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
 
+                //SizedBox(width: 75.0,),
+                Icon(CupertinoIcons.home, color: Colors.white,),
                 SizedBox(width: 10.0,),
-                Text('One stop for all your classroom Docs',style: TextStyle(fontSize: 20.0, color: Colors.white),)
+                Text('Home',style: TextStyle(fontSize: 20.0, color: Colors.white),)
               ],
             ),
           ],
