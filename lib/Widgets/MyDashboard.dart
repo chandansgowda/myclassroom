@@ -8,7 +8,7 @@ import 'package:sjce_myclassroom/subjects/20hu120.dart';
 import 'package:sjce_myclassroom/subjects/20hu130.dart';
 import 'package:sjce_myclassroom/subjects/20ma110.dart';
 import 'package:sjce_myclassroom/subjects/20me120.dart';
-
+import 'package:sjce_myclassroom/subjects/syllabus.dart';
 
 _gridItem(icon, text, context, path ){
   return Column(
@@ -72,6 +72,7 @@ class MyDashboard extends StatelessWidget {
             _gridItem(Icons.font_download_sharp, '20HU130', context, English()),
             _gridItem(Icons.engineering_sharp, '20HU120', context, Innovation() ),
             _gridItem(Icons.dry, '20CH12L', context, ChemistryLab()),
+            _gridItem(Icons.file_copy_outlined, 'Syllabus', context, Syllabus()),
           ],),
         ),
         SizedBox(height: 20.0,),

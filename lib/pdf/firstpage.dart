@@ -52,7 +52,7 @@ class _FirstPageState extends State<FirstPage> {
                       height: 100,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage('assets/images/jssstu.jpg'),
+                          image: AssetImage('assets/images/pdfbg.jpg'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -65,6 +65,7 @@ class _FirstPageState extends State<FirstPage> {
                           elevation: 7.0,
                           child: Center(
                             child: Text(itemList[index].name+" "+(index+1).toString()),
+                            //child: Text(itemList[index].name.toString()),
                           ),
                         ),
                       ),
@@ -97,7 +98,7 @@ class _FirstPageState extends State<FirstPage> {
     //function call
   }
   savePdf(List<int> asset, String name) async {
-    Reference reference = FirebaseStorage.instance.ref("onlinepdf").child(name);
+    Reference reference = FirebaseStorage.instance.ref().child(name);
     UploadTask uploadTask = reference.putData(asset);
     String url = await (await uploadTask).ref.getDownloadURL();
     documentFileUpload(url);
@@ -122,13 +123,14 @@ class _FirstPageState extends State<FirstPage> {
 
   @override
   void initState() {
+    super.initState();
     mainReference.once().then((DataSnapshot snap){
       print(snap);
       var data=snap.value;
       itemList.clear();
       // ignore: unnecessary_statements
-      data.forEach((value){
-      Modal m=new Modal(value['PDF'], value['FileName']);
+      data.forEach((key, value){
+      Modal m = new Modal(value['PDF'], value['Filename']);
       itemList.add(m);
       //get data from firebase
     });
