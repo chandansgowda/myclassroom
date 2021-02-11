@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sjce_myclassroom/pages/admin.dart';
 import 'package:sjce_myclassroom/pages/latestupdates.dart';
 import 'package:sjce_myclassroom/utils/pdfview.dart';
 
@@ -57,9 +58,19 @@ class MyDrawer extends StatelessWidget {
             title: Text('Update App',style: TextStyle(fontSize: 15.0)),
             subtitle: Text('Your App is Updated'),
             onTap: (){},
-          )
+          ),
+          ListTile(
+            leading: Icon(Icons.admin_panel_settings,size: 30.0,),
+            title: Text('Admin Panel',style: TextStyle(fontSize: 15.0)),
+            subtitle: Text('Restricted to users'),
+            onTap: (){
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context)=> Admin()));
+            },
+          ),
         ],
       ),
+
 
     );
   }
