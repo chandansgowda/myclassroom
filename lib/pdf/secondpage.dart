@@ -11,7 +11,7 @@ class _ViewPdfState extends State<ViewPdf> {
   @override
   Widget build(BuildContext context) {
     //get data from first class
-    String data;
+    String data=ModalRoute.of(context).settings.arguments;
     ViewNow() async {
       doc = await PDFDocument.fromURL(
           data);
@@ -23,7 +23,7 @@ class _ViewPdfState extends State<ViewPdf> {
     Widget Loading(){
       ViewNow();
       if(doc==null){
-        //return
+        return Text("Loading...");
       }
     }
     return Scaffold(
