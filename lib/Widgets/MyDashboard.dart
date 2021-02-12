@@ -119,7 +119,7 @@ _top(){
         SizedBox(height: 30.0,),
         TextField(
           decoration: InputDecoration(
-            hintText: "Search(Coming soon)",
+            hintText: "Search   (Coming soon)",
             fillColor: Colors.white,
             filled: true,
             suffixIcon: Icon(Icons.filter_list),

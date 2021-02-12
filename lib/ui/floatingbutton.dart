@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sjce_myclassroom/pages/HomePage.dart';
-import 'package:sjce_myclassroom/pdf/firstpage.dart';
+import 'package:sjce_myclassroom/utils/search.dart';
 
 
 class HomeButton extends StatelessWidget {
@@ -9,10 +8,10 @@ class HomeButton extends StatelessWidget {
     return FloatingActionButton(
       backgroundColor: Colors.deepOrange,
       hoverColor: Colors.deepOrangeAccent,
-      child: Icon(Icons.home,),
+      child: Icon(Icons.search,),
       onPressed: () {
         Navigator.push(context,
-            MaterialPageRoute(builder: (context)=> FirebasePdf()));
+            MaterialPageRoute(builder: (context)=> Search()));
       },
     );
   }
