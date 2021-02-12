@@ -33,7 +33,6 @@ class _WebViewContainerState extends State < WebViewContainer > {
               children: < Widget > [
                 Expanded(
                     child: WebView(
-
                       key: _key,
                       javascriptMode: JavascriptMode.unrestricted,
                       initialUrl: _url,
