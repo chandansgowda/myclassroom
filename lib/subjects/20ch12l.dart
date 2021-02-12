@@ -37,7 +37,14 @@ class _ChemistryLabState extends State<ChemistryLab> {
           ),
         ),
       ),
-      body: itemList.length==0?Text("  Please wait... Its taking longer than usual. Check your internet connection..") : ListView.builder(
+      body: itemList.length==0?Center(
+        child: Container(
+          child: CircularProgressIndicator(
+            backgroundColor: Colors.orange,
+            valueColor: new AlwaysStoppedAnimation<Color>(Colors.deepOrangeAccent),
+          ),// Text("  Please wait... Its taking longer than usual. Check your internet connection..")
+        ),
+      ) : ListView.builder(
         itemCount:itemList.length,
         itemBuilder: (context,index){
           return Padding(
@@ -173,7 +180,14 @@ class _ViewPdfState extends State<ViewPdf> {
     Widget Loading(){
       ViewNow();
       if(doc==null){
-        return Text("  Please wait... Its taking longer than usual. Check your internet connection..");
+        return Center(
+          child: Container(
+            child: CircularProgressIndicator(
+              backgroundColor: Colors.orange,
+              valueColor: new AlwaysStoppedAnimation<Color>(Colors.deepOrangeAccent),
+            ),// Text("  Please wait... Its taking longer than usual. Check your internet connection..")
+          ),
+        );
       }
     }
     return Scaffold(

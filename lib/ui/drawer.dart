@@ -74,7 +74,7 @@ class MyDrawer extends StatelessWidget {
             subtitle: Text('Uniquota Developers Club'),
             onTap: (){
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context)=> Website()));
+                  MaterialPageRoute(builder: (context)=> WebViewContainer("https://www.uniquota.in/p/sjce-myclassroom-mobile-app.html")));
             },
           ),
           ListTile(

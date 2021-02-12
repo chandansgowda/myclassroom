@@ -45,7 +45,14 @@ class _LatestUpdatesState extends State<LatestUpdates> {
       ),
       body: new Container(
           child: allData.length == 0
-              ? new Text('  Please wait... Its taking longer than usual. Check your internet connection..')
+              ? Center(
+            child: Container(
+              child: CircularProgressIndicator(
+                backgroundColor: Colors.orange,
+                valueColor: new AlwaysStoppedAnimation<Color>(Colors.deepOrangeAccent),
+              ),// Text("  Please wait... Its taking longer than usual. Check your internet connection..")
+            ),
+          )
               : new ListView.builder(
             itemCount: allData.length,
             itemBuilder: (_, index) {
