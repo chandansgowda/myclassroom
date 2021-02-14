@@ -98,9 +98,9 @@ class _MathematicsState extends State<Mathematics> {
           },
         child: Icon(Icons.add,color: Colors.white,),
         backgroundColor: Colors.red,
-      ),
-    );
-  }
+      // ),
+    )
+    );}
   Future getPdfAndUpload()async{
     var rng = new Random();
     String randomName="";

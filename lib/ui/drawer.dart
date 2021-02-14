@@ -60,21 +60,21 @@ class MyDrawer extends StatelessWidget {
           ),
 
           ListTile(
-            leading: Icon(Icons.admin_panel_settings,size: 30.0,),
-            title: Text('Admin Panel',style: TextStyle(fontSize: 15.0)),
-            subtitle: Text('Restricted to users'),
-            onTap: (){
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context)=> Admin()));
-            },
-          ),
-          ListTile(
             leading: Icon(Icons.people,size: 30.0,),
             title: Text('Our Team',style: TextStyle(fontSize: 15.0)),
             subtitle: Text('Uniquota Developers Club'),
             onTap: (){
               Navigator.push(context,
                   MaterialPageRoute(builder: (context)=> WebViewContainer("https://www.uniquota.in/p/sjce-myclassroom-mobile-app.html")));
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.admin_panel_settings,size: 30.0,),
+            title: Text('Admin Panel',style: TextStyle(fontSize: 15.0)),
+            subtitle: Text('You are not an admin'),
+            onTap: (){
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context)=> Admin()));
             },
           ),
           ListTile(
